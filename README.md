@@ -1,15 +1,15 @@
 # Experiments with MNIST
 
-This repo documents my experiments and practise of machine learning using the MNIST dataset. The classic and Zalando MNIST datasets are both present here.
+This repo documents my experiments and practise of machine learning using the MNIST dataset. The classic and Zalando MNIST datasets are both present here. The best model for each approach is saved in the repo home directory.
 
 ## Best Results:
 
 ### Classic MNIST:
 
-| Method: | Train Error | Test Error |
-| ------- | ----------- | ---------- |
-| SK Learn MLP Regressor | 3.47995 | 3.39730 |
-| PyTorch | - | - |
+| Method: | Test Error |
+| ------- | ---------- |
+| SK Learn MLP Regressor | 3.39730 |
+| PyTorch | 90.5% |
 
 ### SKLearn MLP Regressor Settings:
 
@@ -21,4 +21,16 @@ max_iter=500
 
 ### PyTorch Settings:
 
-(TBC)
+Error model: Cross-Entropy Loss
+ANN Structure: Linear ReLU Stack
+
+>        self.linear_relu_stack = nn.Sequential(
+            nn.Linear(28*28, 512),
+            nn.ReLU(),
+            nn.Linear(512, 512),
+            nn.ReLU(),
+            nn.Linear(512, 10),
+        )
+
+### Fashion MNIST: 
+(tbc)

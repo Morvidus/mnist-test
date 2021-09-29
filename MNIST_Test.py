@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import time
 
-mndata = MNIST('./Fashion MNIST/')
+mndata = MNIST('./FashionMNIST/')
 
 train_X, train_Y = mndata.load_training()
 test_X, test_Y = mndata.load_testing()
